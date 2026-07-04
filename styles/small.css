@@ -1,0 +1,260 @@
+:root {
+    --color-bg: #f7f7f5;
+    --color-surface: #ffffff;
+    --color-primary: #14213d;
+    --color-primary-dark: #0b1424;
+    --color-accent: #fca311;
+    --color-text: #1b1b1b;
+    --color-muted: #5b5b5b;
+    --color-border: #e1ded7;
+    --color-bg2: #e3efe1;
+    --color-text2: #33562f;
+    --font-main: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.55;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    position: relative;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+#creditTotal {
+    font-size: 0.9rem;
+    color: var(--color-primary-dark);
+    margin-top: 0.25rem;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.site-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+
+.hamburger {
+    width: 34px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger::before {
+    content: "☰";
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.hamburger.open::before {
+    content: "✕";
+}
+
+#nav {
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+
+}
+
+#nav.open {
+    max-height: 200px;
+}
+
+#nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.75rem;
+}
+
+#nav a {
+    display: block;
+    padding: 0.75rem 0.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-weight: 500;
+}
+
+#nav a:hover,
+#nav a:focus-visible {
+    color: var(--color-accent);
+}
+
+#nav a.current {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 3rem;
+}
+
+main h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--color-accent);
+    display: inline-block;
+}
+
+
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.about-me,
+.student-photo,
+.courses {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-me h2,
+.student-photo h2,
+.courses h2 {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    font-size: 1.05rem;
+}
+
+.about-me p {
+    padding: 0 1rem;
+}
+
+.about-me p:first-of-type {
+    margin-top: 1rem;
+}
+
+.about-me p:last-of-type {
+    margin-bottom: 1rem;
+}
+
+.student-photo img {
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.courses {
+    padding-bottom: 1.25rem;
+}
+
+.course-filters {
+    display: flex;
+    gap: 0.6rem;
+    padding: 1rem 1rem 0;
+    flex-wrap: wrap;
+}
+
+.course-filters button {
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+
+}
+
+.course-filters button:hover,
+.course-filters button:focus-visible {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.course-filters button.active {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-primary-dark);
+}
+
+.course-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 1rem;
+}
+
+.course-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.course-card.completed {
+    background-color: var(--color-bg2);
+    color: var(--color-text2);
+    border-color: #a9cfa4;
+}
+
+.credit-total {
+    text-align: center;
+    padding: 0 1rem;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+#footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    filter: invert(1);
+}
+
+.social-links a:hover img,
+.social-links a:focus-visible img {
+    transform: translateY(-3px);
+}
+
+.site-footer p {
+    font-size: 0.85rem;
+    color: #d8dbe4;
+    margin: 0.25rem 0;
+}

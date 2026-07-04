@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Home</title>
+    <meta name="author" content="Jayden Baidoo">
+    <meta name="description" content="Personal website for Jayden Baidoo. WDD231 course project.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="images/site-logo.svg" alt="Logo" alt="" width="40" height="40">
+        <span class="site-name">Jayden Baidoo</span>
+        <button id="menuButton" class="hamburger"></button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Final</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <section class="info-cards">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    I'm a Software Development student at the BYU Idaho. I have the passion for creating user-friendly
+                    and visually appealing web applications. I enjoy learning new technologies and applying them to
+                    real-world projects.
+                    I'm currently taking WDD231 and I'm excited to continue learning and growing as a web developer.
+                </p>
+                <p>
+                    Outside of coursework, I enjoy music production, and playing the piano.
+                </p>
+            </section>
+
+            <section class="student-photo">
+                <h2>My Photo</h2>
+                <img src="images/student-photo.webp" alt="Student Photo">
+            </section>
+        </section>
+
+
+        <section id="courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="course-filters" id="courseFilters">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="CSE">CSE</button>
+                <button data-filter="WDD">WDD</button>
+            </div>
+
+            <div class="course-cards" id="courseCards"></div>
+
+            <p class="credit-total">
+                The total credits for the course listed above is <span id="creditTotal">0</span>
+            </p>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="social-links">
+            <a href="https://github.com/jayde2557" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <img src="images/github.svg" alt="" width="28" height="28">
+            </a>
+            <a href="https://www.linkedin.com/in/jayden-baidoo-4b57a0271" target="_blank" rel="noopener"
+                aria-label="LinkedIn profile">
+                <img src="images/linkedin.svg" alt="" width="28" height="28">
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X">
+                <img src="images/x.svg" alt="" width="28" height="28">
+            </a>
+        </div>
+
+        <p>&copy; <span id="currentyear"></span> Jayden Baidoo GH</p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+
+</html>
