@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Acme Consulting Group",
+        "address": "120 Market Street, Suite 400, Springfield, IL 62701",
+        "phone": "(217) 555-0101",
+        "website": "https://www.acmeconsulting.example.com",
+        "image": "acme-consulting.png",
+        "membershipLevel": 3,
+        "category": "Business Consulting",
+        "tagline": "Strategy and operations consulting for growing businesses"
+    },
+    {
+        "name": "LearnNet Media",
+        "address": "456 Elm Street, Suite 200, Springfield, IL 62702",
+        "phone": "(217) 555-0202",
+        "website": "https://www.learnetmedia.example.com",
+        "image": "learnnet-media.png",
+        "membershipLevel": 2,
+        "category": "Media and Communications",
+        "tagline": "Innovative media solutions for modern businesses"
+    },
+    {
+        "name": "Riverbend Hardware Co.",
+        "address": "45 Riverbend Road, Springfield, IL 62703",
+        "phone": "(217) 555-0122",
+        "website": "https://www.riverbendhardware.example.com",
+        "image": "riverbend.png",
+        "membershipLevel": 1,
+        "category": "Retail - Hardware",
+        "tagline": "Everything you need for your next project"
+    },
+    {
+        "name": "Golden Gate Bakery & Cafe",
+        "address": "12 Main Street, Springfield, IL 62701",
+        "phone": "(217) 555-0145",
+        "website": "https://www.goldengatebakery.example.com",
+        "image": "golden.png",
+        "membershipLevel": 1,
+        "category": "Food & Beverage",
+        "tagline": "Fresh baked goods daily, made from scratch"
+    },
+    {
+        "name": "Summit Legal Partners",
+        "address": "300 Courthouse Plaza, Suite 210, Springfield, IL 62704",
+        "phone": "(217) 555-0156",
+        "website": "https://www.summitlegal.example.com",
+        "image": "summit-legal.png",
+        "membershipLevel": 3,
+        "category": "Legal Services",
+        "tagline": "Trusted legal counsel for individuals and businesses"
+    },
+    {
+        "name": "Northwind Landscaping",
+        "address": "77 Garden Way, Springfield, IL 62705",
+        "phone": "(217) 555-0167",
+        "website": "https://www.northwindlandscaping.example.com",
+        "image": "northwind.png",
+        "membershipLevel": 2,
+        "category": "Landscaping & Outdoor Services",
+        "tagline": "Beautiful, sustainable outdoor spaces"
+    },
+    {
+        "name": "Clearwater Financial Advisors",
+        "address": "500 Bankers Row, Suite 100, Springfield, IL 62701",
+        "phone": "(217) 555-0178",
+        "website": "https://www.clearwaterfinancial.example.com",
+        "image": "cleanwater.png",
+        "membershipLevel": 3,
+        "category": "Financial Services",
+        "tagline": "Personalized financial planning for every stage of life"
+    }
+]

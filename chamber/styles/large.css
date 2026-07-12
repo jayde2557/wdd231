@@ -1,0 +1,90 @@
+@media (min-width: 768px) {
+
+    header {
+        padding: 16px 40px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+        order: 2;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 28px;
+        border-top: none;
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 4px 0;
+        border-bottom: none;
+        position: relative;
+    }
+
+    nav ul li a.current::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        height: 2px;
+        background: var(--gold);
+    }
+
+    main {
+        padding: 40px 40px 60px;
+    }
+
+    main h1 {
+        font-size: 2.4rem;
+        margin-bottom: 26px;
+    }
+
+    /* Directory grid: multiple columns on larger screens */
+    .member-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+    }
+
+    /* List view: rows with name / address / phone / website in columns */
+    .member-container.list-view {
+        grid-template-columns: 1fr;
+    }
+
+    .member-container.list-view .member-card {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr 1.5fr;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
+    }
+
+    /* Footer: three columns side by side */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex: 1;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: 1100px) {
+    .member-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
