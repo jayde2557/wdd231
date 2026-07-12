@@ -46,13 +46,12 @@
         margin-bottom: 26px;
     }
 
-    /* Directory grid: multiple columns on larger screens */
     .member-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 26px;
+        min-height: 700px;
     }
 
-    /* List view: rows with name / address / phone / website in columns */
     .member-container.list-view {
         grid-template-columns: 1fr;
     }
@@ -65,7 +64,6 @@
         text-align: left;
     }
 
-    /* Footer: three columns side by side */
     .footer-content {
         flex-direction: row;
         justify-content: space-between;

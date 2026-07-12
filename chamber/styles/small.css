@@ -9,7 +9,7 @@
     --line: #d8c9a5;
     --gold: #b9852c;
     --gold-bg: #f5e8cb;
-    
+
     --font-display: 'Poppins', 'Segoe UI', Arial, sans-serif;
     --font-body: 'Inter', -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 
@@ -183,11 +183,12 @@ main h1 {
     color: #fff;
 }
 
-/* ---- Member directory cards (mobile: single column) ---- */
+
 .member-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
+    min-height: 600px;
 }
 
 .member-card {
@@ -234,7 +235,7 @@ main h1 {
     font-weight: 500;
 }
 
-/* ---- List view: flat striped rows instead of boxed cards ---- */
+/* List view */
 .member-container.list-view {
     gap: 0;
 }
