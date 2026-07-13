@@ -10,7 +10,6 @@ const memberData = async () => {
     }
 };
 
-// Builds one card's DOM for a single company object
 function createCard(company) {
     const card = document.createElement('div');
     card.className = 'member-card';
@@ -29,17 +28,16 @@ function createCard(company) {
     return card;
 }
 
-// Renders the full list into the container by ID
 function renderMembers(companies) {
     const container = document.getElementById('members-container');
-    container.innerHTML = ''; // clear any placeholder content
+    container.innerHTML = '';
 
     companies.forEach(company => {
         container.appendChild(createCard(company));
     });
 }
 
-// Kick things off once the script runs
+
 memberData().then(companies => {
     renderMembers(companies);
 });
