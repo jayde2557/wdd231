@@ -285,7 +285,7 @@ main h1 {
     align-items: flex-start;
     gap: 10px;
     padding: 20px;
-    background: linear-gradient(to right, rgba(28, 39, 64, 0.82), rgba(28, 39, 64, 0.35));
+    background-color: rgba(28, 39, 64, 0.75)
 }
 
 .hero-content h1 {
