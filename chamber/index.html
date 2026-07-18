@@ -19,12 +19,16 @@
     <link rel="stylesheet" href="styles/large.css">
 
     <script type="module" src="scripts/members.js" defer></script>
+    <script type="module" src="scripts/spotlight.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/views.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -35,8 +39,8 @@
         <button id="menuButton" class="hamburger" aria-label="Toggle navigation menu"></button>
         <nav id="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#" class="current">Directory</a></li>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
@@ -46,14 +50,39 @@
 
 
     <main>
-        <h1>Directory</h1>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Dansoman Market">
+            <div class="hero-content">
+                <h1>Welcome to Jayde Chamber of Commerce</h1>
+                <p>Connecting local businesses and building a stronger community.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
 
-        <div class="view-filters" id="view-filters">
-            <button data-filter="grid" class="active">Grid</button>
-            <button data-filter="list">List</button>
+        <div class="home-grid">
+            <section class="current-events">
+                <h2>Current Events</h2>
+                <ul>
+                    <li>
+                        <span class="event-date">Aug 12</span>
+                        Chamber Mixer at the Riverfront Hall
+                    </li>
+                    <!-- more <li> events -->
+                </ul>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+                <div id="weather-container"></div>
+            </section>
         </div>
 
-        <div class="member-container" id="members-container"></div>
+
+        <section class="spotlight">
+            <h2>Spotlight</h2>
+            <div class="spotlight-container" id="spotlight-container"></div>
+
+        </section>
 
 
     </main>

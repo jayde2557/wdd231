@@ -1,14 +1,4 @@
-// Fetches the member data from the JSON file
-const memberData = async () => {
-    try {
-        const response = await fetch('data/members.json');
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('Error fetching member data:', error);
-        return [];
-    }
-};
+import { memberData } from './memberData.js';
 
 function createCard(company) {
     const card = document.createElement('div');
@@ -41,3 +31,4 @@ function renderMembers(companies) {
 memberData().then(companies => {
     renderMembers(companies);
 });
+

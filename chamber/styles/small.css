@@ -1,21 +1,47 @@
-:root {
-    --indigo: #2b3a5e;
-    --indigo-dark: #1c2740;
-    --ink: #2a2115;
-    --ink-soft: #6b6053;
-    --sand: #e9dfc7;
-    --sand-light: #f4efe1;
-    --white: #fffcf5;
-    --line: #d8c9a5;
-    --gold: #b9852c;
-    --gold-bg: #f5e8cb;
+/* =================================================================
+   Timbuktu Chamber of Commerce — small.css (mobile-first base)
+   ================================================================= */
 
-    --font-display: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    --font-body: 'Inter', -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+:root {
+    /* ---- Color tokens, drawn from Timbuktu's history as a trade
+       hub for indigo cloth, gold, salt, and manuscripts ---- */
+    --indigo: #2b3a5e;
+    /* deep indigo — Tuareg cloth, primary brand */
+    --indigo-dark: #1c2740;
+    /* darker indigo — header, footer */
+    --ink: #2a2115;
+    /* manuscript-ink brown-black — body text */
+    --ink-soft: #6b6053;
+    /* muted secondary text */
+    --sand: #e9dfc7;
+    /* parchment/sand — page background */
+    --sand-light: #f4efe1;
+    /* lighter sand — section backgrounds */
+    --paper: #fffcf5;
+    /* warm off-white — card surfaces */
+    --line: #d8c9a5;
+    /* sand-toned hairline borders */
+    --gold: #b9852c;
+    /* gold trade accent */
+    --gold-bg: #f5e8cb;
+    /* gold badge background */
+
+    /* Membership tier colors */
+    --tier-gold: #b9852c;
+    --tier-gold-bg: #f7ecd2;
+    --tier-silver: #5b6b7c;
+    --tier-silver-bg: #e6eaee;
+    --tier-member: #3f6f63;
+    --tier-member-bg: #e3efe9;
+
+    /* Type */
+    --font-display: 'Poppins', -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-body: 'Work Sans', -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 
     --radius: 8px;
 }
 
+/* ---- Reset ---- */
 * {
     box-sizing: border-box;
 }
@@ -45,7 +71,7 @@ img {
     display: block;
 }
 
-/* Header */
+/* ---- Header ---- */
 header {
     display: flex;
     align-items: center;
@@ -133,15 +159,6 @@ nav ul li a.current {
     font-weight: 700;
 }
 
-header>svg,
-header .theme-toggle {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: linear-gradient(90deg, var(--sand-light) 50%, var(--indigo-dark) 50%);
-    border: 2px solid var(--sand-light);
-    cursor: pointer;
-}
 
 main {
     max-width: 1100px;
@@ -167,7 +184,7 @@ main h1 {
     font-size: 0.85rem;
     padding: 8px 22px;
     border: 1px solid var(--indigo);
-    background: var(--white);
+    background: var(--paper);
     color: var(--indigo);
     border-radius: 999px;
     cursor: pointer;
@@ -183,24 +200,22 @@ main h1 {
     color: #fff;
 }
 
-
+/* ---- Member directory cards (mobile)----*/
 .member-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    min-height: 600px;
 }
 
 .member-card {
-    background: var(--white);
-    border-radius: 4px;
+    background: var(--paper);
+    border-radius: var(--radius);
     box-shadow: 0 1px 4px rgba(28, 39, 64, 0.08);
     padding: 24px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .member-card img {
@@ -214,12 +229,6 @@ main h1 {
     font-size: 1.15rem;
     margin-bottom: 4px;
 }
-
-.member-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
 
 .member-card p {
     font-size: 0.85rem;
@@ -235,7 +244,7 @@ main h1 {
     font-weight: 500;
 }
 
-/* List view */
+/* ---- List view ---- */
 .member-container.list-view {
     gap: 0;
 }
@@ -253,6 +262,230 @@ main h1 {
 
 .member-container.list-view .member-card:nth-child(even) {
     background: var(--sand-light);
+}
+
+/* ---- Home page: Hero ---- */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(28, 39, 64, 0.82), rgba(28, 39, 64, 0.35));
+}
+
+.hero-content h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    max-width: 320px;
+}
+
+.hero-content p {
+    color: var(--sand-light);
+    font-size: 0.9rem;
+    max-width: 300px;
+    margin: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--indigo-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 10px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #cf9b3d;
+}
+
+/* ---- Home page: content sections (events, weather) ---- */
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.home-grid section,
+.spotlights {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+.home-grid h2,
+.spotlights h2 {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+}
+
+.current-events ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.current-events li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
+}
+
+.current-events li:last-child {
+    border-bottom: none;
+}
+
+.current-events .event-date {
+    display: block;
+    font-weight: 700;
+    color: var(--indigo);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* ---- Home page: Weather ---- */
+.weather-current {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.weather-temp {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    color: var(--indigo-dark);
+    line-height: 1;
+}
+
+.weather-desc {
+    color: var(--ink-soft);
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+
+.weather-forecast {
+    display: flex;
+    gap: 8px;
+}
+
+.forecast-day {
+    flex: 1;
+    text-align: center;
+    background: var(--sand-light);
+    border-radius: 6px;
+    padding: 10px 4px;
+}
+
+.forecast-day .day-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--ink-soft);
+    margin-bottom: 4px;
+}
+
+.forecast-day .day-temp {
+    font-weight: 700;
+    color: var(--indigo);
+    font-size: 0.95rem;
+}
+
+/* ---- Home page: Member spotlights ---- */
+.spotlights {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+}
+
+.spotlight-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.spotlight-card {
+    position: relative;
+    background: var(--sand-light);
+    border: 2px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+    text-align: center;
+}
+
+.spotlight-card::before {
+    content: "Spotlight";
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+
+.spotlight-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin: 0 auto 8px;
+}
+
+.spotlight-card h2 {
+    font-size: 1.05rem;
+    margin-bottom: 2px;
+}
+
+.spotlight-card p {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.spotlight-level {
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.spotlight-card a {
+    font-size: 0.85rem;
+    color: var(--indigo);
+    text-decoration: underline;
 }
 
 /* ---- Footer ---- */
