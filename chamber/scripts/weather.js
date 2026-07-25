@@ -28,7 +28,7 @@ function displayCurrentWeather(data) {
     const current = document.createElement('div');
     current.className = 'weather-current';
     current.innerHTML = `
-      <img src="${iconSrc}" alt="${description}">
+      <img src="${iconSrc}" alt="${description}" width="50" height="50">
       <div>
         <p class="weather-temp">${data.main.temp.toFixed(0)}&deg;F</p>
         <p class="weather-desc">${description}</p>

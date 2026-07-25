@@ -25,11 +25,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
-
-</head>
 
 <body>
     <header>
@@ -50,7 +49,9 @@
 
     <main>
         <section class="hero">
-            <img src="images/hero.webp" alt="Dansoman City View">
+            <img src="images/hero-800.jpg"
+                srcset="images/hero-480.jpg 480w, images/hero-800.jpg 800w, images/hero-1000.jpg 1200w"
+                sizes="(max-width: 768px) 100vw, 1200px" alt="Dansoman City View" width="1200" height="800">
             <div class="hero-content">
                 <h1>Welcome to Jayde Chamber of Commerce</h1>
                 <p>Connecting local businesses and building a stronger community.</p>
@@ -64,7 +65,7 @@
                 <ul>
                     <li>
                         <span class="event-date">Aug 12</span>
-                        Chamber meeting at the Accra Business Center. 
+                        Chamber meeting at the Accra Business Center.
                         <br><a href="#">Learn more</a>
                     </li>
                 </ul>
