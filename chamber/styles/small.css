@@ -1,32 +1,25 @@
-/* =================================================================
-   Timbuktu Chamber of Commerce — small.css (mobile-first base)
-   ================================================================= */
-
 :root {
-    /* ---- Color tokens, drawn from Timbuktu's history as a trade
-       hub for indigo cloth, gold, salt, and manuscripts ---- */
     --indigo: #2b3a5e;
-    /* deep indigo — Tuareg cloth, primary brand */
     --indigo-dark: #1c2740;
-    /* darker indigo — header, footer */
     --ink: #2a2115;
-    /* manuscript-ink brown-black — body text */
     --ink-soft: #6b6053;
-    /* muted secondary text */
     --sand: #e9dfc7;
-    /* parchment/sand — page background */
     --sand-light: #f4efe1;
-    /* lighter sand — section backgrounds */
     --paper: #fffcf5;
-    /* warm off-white — card surfaces */
     --line: #d8c9a5;
-    /* sand-toned hairline borders */
     --gold: #b9852c;
-    /* gold trade accent */
     --gold-bg: #f5e8cb;
-    /* gold badge background */
+    --gold-hover: #cf9b3d;
+    --white: #ffffff;
 
-    /* Membership tier colors */
+    --overlay-strong: rgba(28, 39, 64, 0.88);
+    --overlay-soft: rgba(28, 39, 64, 0.6);
+    --overlay-solid: rgba(28, 39, 64, 0.75);
+    --card-shadow: rgba(28, 39, 64, 0.08);
+
+    --divider-strong: rgba(244, 239, 225, 0.15);
+    --divider-soft: rgba(244, 239, 225, 0.1);
+
     --tier-gold: #b9852c;
     --tier-gold-bg: #f7ecd2;
     --tier-silver: #5b6b7c;
@@ -34,14 +27,12 @@
     --tier-member: #3f6f63;
     --tier-member-bg: #e3efe9;
 
-    /* Type */
     --font-display: 'Poppins', -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-    --font-body: 'Work Sans', -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-body: 'Poppins', -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 
     --radius: 8px;
 }
 
-/* ---- Reset ---- */
 * {
     box-sizing: border-box;
 }
@@ -71,7 +62,6 @@ img {
     display: block;
 }
 
-/* ---- Header ---- */
 header {
     display: flex;
     align-items: center;
@@ -93,14 +83,13 @@ header img {
     font-family: var(--font-display);
     font-weight: 600;
     font-size: 1.15rem;
-    color: #fff;
+    color: var(--white);
     flex: 1;
 }
 
 .hamburger {
     width: 32px;
     height: 26px;
-    background: transparent;
     border: none;
     position: relative;
     cursor: pointer;
@@ -142,7 +131,7 @@ nav ul {
     list-style: none;
     margin: 10px 0 0;
     padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid var(--divider-strong);
 }
 
 nav ul li a {
@@ -151,7 +140,7 @@ nav ul li a {
     color: var(--sand-light);
     text-decoration: none;
     font-weight: 500;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--divider-soft);
 }
 
 nav ul li a.current {
@@ -159,6 +148,15 @@ nav ul li a.current {
     font-weight: 700;
 }
 
+header>svg,
+header .theme-toggle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--sand-light) 50%, var(--indigo-dark) 50%);
+    border: 2px solid var(--sand-light);
+    cursor: pointer;
+}
 
 main {
     max-width: 1100px;
@@ -197,10 +195,9 @@ main h1 {
 
 .view-filters button.active {
     background: var(--indigo);
-    color: #fff;
+    color: var(--white);
 }
 
-/* ---- Member directory cards (mobile)----*/
 .member-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -210,7 +207,7 @@ main h1 {
 .member-card {
     background: var(--paper);
     border-radius: var(--radius);
-    box-shadow: 0 1px 4px rgba(28, 39, 64, 0.08);
+    box-shadow: 0 1px 4px var(--card-shadow);
     padding: 24px 20px;
     text-align: center;
     display: flex;
@@ -218,7 +215,8 @@ main h1 {
     gap: 6px;
 }
 
-.member-card img {
+.member-card img,
+.spotlight-card img {
     width: 64px;
     height: 64px;
     object-fit: contain;
@@ -230,21 +228,22 @@ main h1 {
     margin-bottom: 4px;
 }
 
-.member-card p {
+.member-card p,
+.spotlight-card p {
     font-size: 0.85rem;
     color: var(--ink-soft);
     margin: 0;
     line-height: 1.4;
 }
 
-.member-card a {
+.member-card a,
+.spotlight-card a {
     font-size: 0.85rem;
     color: var(--indigo);
     text-decoration: underline;
     font-weight: 500;
 }
 
-/* ---- List view ---- */
 .member-container.list-view {
     gap: 0;
 }
@@ -264,7 +263,6 @@ main h1 {
     background: var(--sand-light);
 }
 
-/* ---- Home page: Hero ---- */
 .hero {
     position: relative;
 }
@@ -285,11 +283,12 @@ main h1 {
     align-items: flex-start;
     gap: 10px;
     padding: 20px;
-    background-color: rgba(28, 39, 64, 0.75)
+    background: linear-gradient(to right, var(--overlay-strong), var(--overlay-soft));
+    background-color: var(--overlay-solid);
 }
 
 .hero-content h1 {
-    color: #fff;
+    color: var(--white);
     font-size: 1.5rem;
     max-width: 320px;
 }
@@ -313,10 +312,9 @@ main h1 {
 }
 
 .cta-button:hover {
-    background: #cf9b3d;
+    background: var(--gold-hover);
 }
 
-/* ---- Home page: content sections (events, weather) ---- */
 .home-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -368,7 +366,6 @@ main h1 {
     letter-spacing: 0.03em;
 }
 
-/* ---- Home page: Weather ---- */
 .weather-current {
     display: flex;
     align-items: center;
@@ -418,7 +415,6 @@ main h1 {
     font-size: 0.95rem;
 }
 
-/* ---- Home page: Member spotlights ---- */
 .spotlights {
     max-width: 1100px;
     margin: 0 auto 30px;
@@ -446,7 +442,7 @@ main h1 {
     left: 50%;
     transform: translateX(-50%);
     background: var(--gold);
-    color: #fff;
+    color: var(--white);
     font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -455,23 +451,9 @@ main h1 {
     border-radius: 999px;
 }
 
-.spotlight-card img {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
-    margin: 0 auto 8px;
-}
-
 .spotlight-card h2 {
     font-size: 1.05rem;
     margin-bottom: 2px;
-}
-
-.spotlight-card p {
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-    margin: 0;
-    line-height: 1.4;
 }
 
 .spotlight-level {
@@ -482,13 +464,240 @@ main h1 {
     letter-spacing: 0.04em;
 }
 
-.spotlight-card a {
+.join-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px 40px;
+}
+
+.join-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+}
+
+.join-form-section label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.join-form-section input,
+.join-form-section select,
+.join-form-section textarea {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--sand-light);
+    color: var(--ink);
+}
+
+.join-form-section input:focus,
+.join-form-section select:focus,
+.join-form-section textarea:focus {
+    outline: 2px solid var(--indigo);
+    outline-offset: 1px;
+}
+
+.join-form-section input:invalid:not(:placeholder-shown) {
+    border-color: #b3452f;
+}
+
+.join-form-section textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.join-form-section input[type="submit"] {
+    align-self: flex-start;
+    background: var(--gold);
+    color: var(--indigo-dark);
+    font-weight: 700;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 999px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.join-form-section input[type="submit"]:hover {
+    background: var(--gold-hover);
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.membership-card {
+    background: var(--paper);
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: card-enter 0.5s ease forwards;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.1s;
+    border-color: var(--tier-member);
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.25s;
+    border-color: #a9713a;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.4s;
+    border-color: var(--tier-silver);
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.55s;
+    border-color: var(--tier-gold);
+}
+
+@keyframes card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.membership-card p {
     font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+}
+
+.membership-card a {
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--indigo);
+    text-decoration: none;
+}
+
+.membership-card a:hover {
     text-decoration: underline;
 }
 
-/* ---- Footer ---- */
+.membership-modal {
+    max-width: 420px;
+    width: 90%;
+    border: none;
+    border-radius: var(--radius);
+    padding: 24px;
+    background: var(--paper);
+    color: var(--ink);
+}
+
+.membership-modal::backdrop {
+    background: rgba(28, 39, 64, 0.55);
+}
+
+.membership-modal h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.membership-modal ul {
+    margin: 0 0 18px;
+    padding-left: 20px;
+}
+
+.membership-modal li {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.membership-modal .modal-close {
+    background: var(--indigo);
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.membership-modal .modal-close:hover {
+    background: var(--indigo-dark);
+}
+
+.thankyou-section {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px 40px;
+    text-align: center;
+}
+
+.thankyou-intro {
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+}
+
+.thankyou-details {
+    text-align: left;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.thankyou-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    flex-wrap: wrap;
+}
+
+.thankyou-details div:last-child {
+    border-bottom: none;
+}
+
+.thankyou-details dt {
+    font-weight: 700;
+    color: var(--indigo-dark);
+    font-size: 0.85rem;
+}
+
+.thankyou-details dd {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+}
+
 footer {
     background: var(--indigo-dark);
     color: var(--sand-light);
