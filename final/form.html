@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Confirmation page for Jayk Music Studio contact submissions.">
+
+    <meta name="author" content="Jayden Baidoo">
+
+    <title>Message Received | Jayk Music Studio</title>
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a class="site-logo" href="index.html" aria-label="Jayk Music Studio home">
+            <span class="logo-mark">JM</span>
+            <span class="logo-name">Jayk Music Studio</span>
+        </a>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-hero">
+
+            <p class="eyebrow">Message Received</p>
+
+            <h1>
+                Thanks for
+                <span>reaching out.</span>
+            </h1>
+
+            <p>
+                Here's what you submitted.
+            </p>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">Your Message</p>
+
+                <h2>Submission Details</h2>
+
+            </div>
+
+
+            <div class="form-action-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="display-name"></span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="display-email"></span>
+                </p>
+
+                <p>
+                    <strong>Interested in:</strong>
+                    <span id="display-service"></span>
+                </p>
+
+                <p>
+                    <strong>Message:</strong>
+                    <span id="display-message"></span>
+                </p>
+
+                <a class="button button-primary" href="index.html">
+                    Back to Home
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Jayk Music Studio
+            </p>
+
+            <p>
+                WDD231 Individual Project
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.querySelector("#display-name").textContent =
+            params.get("name") || "Not provided";
+
+        document.querySelector("#display-email").textContent =
+            params.get("email") || "Not provided";
+
+        document.querySelector("#display-service").textContent =
+            params.get("service") || "Not provided";
+
+        document.querySelector("#display-message").textContent =
+            params.get("message") || "Not provided";
+    </script>
+
+</body>
+
+</html>

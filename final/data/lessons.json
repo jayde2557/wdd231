@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "name": "Piano Fundamentals",
+        "level": "Beginner",
+        "ageRange": "7–12",
+        "duration": "45 minutes",
+        "price": "GH₵150",
+        "description": "A foundation course covering posture, keyboard familiarity, basic notation, rhythm, and introductory repertoire."
+    },
+    {
+        "id": 2,
+        "name": "Teen Piano Foundations",
+        "level": "Beginner",
+        "ageRange": "13–17",
+        "duration": "45 minutes",
+        "price": "GH₵150",
+        "description": "An introduction to piano designed around developing confidence, technique, and musical understanding."
+    },
+    {
+        "id": 3,
+        "name": "Adult Piano Foundations",
+        "level": "Beginner",
+        "ageRange": "18+",
+        "duration": "45 minutes",
+        "price": "GH₵175",
+        "description": "A flexible introduction to piano for adults beginning their musical journey."
+    },
+    {
+        "id": 4,
+        "name": "Intermediate Piano",
+        "level": "Intermediate",
+        "ageRange": "10+",
+        "duration": "60 minutes",
+        "price": "GH₵200",
+        "description": "Develop technique, musical interpretation, sight reading, and repertoire beyond the beginner level."
+    },
+    {
+        "id": 5,
+        "name": "Advanced Piano",
+        "level": "Advanced",
+        "ageRange": "13+",
+        "duration": "60 minutes",
+        "price": "GH₵250",
+        "description": "Focused instruction for advanced students working toward challenging repertoire and stronger performance skills."
+    },
+    {
+        "id": 6,
+        "name": "Ear Training",
+        "level": "All Levels",
+        "ageRange": "10+",
+        "duration": "45 minutes",
+        "price": "GH₵175",
+        "description": "Develop the ability to recognize intervals, chords, melodies, rhythms, and musical patterns by ear."
+    },
+    {
+        "id": 7,
+        "name": "Music Theory",
+        "level": "All Levels",
+        "ageRange": "10+",
+        "duration": "45 minutes",
+        "price": "GH₵175",
+        "description": "Explore notation, scales, chords, harmony, key signatures, and the principles behind the music you play."
+    },
+    {
+        "id": 8,
+        "name": "Sight Reading",
+        "level": "Intermediate",
+        "ageRange": "10+",
+        "duration": "45 minutes",
+        "price": "GH₵175",
+        "description": "Build confidence reading unfamiliar music and translating notation into accurate musical performance."
+    },
+    {
+        "id": 9,
+        "name": "Chord Progressions",
+        "level": "Intermediate",
+        "ageRange": "12+",
+        "duration": "45 minutes",
+        "price": "GH₵175",
+        "description": "Learn common chord patterns and how they can be used for accompaniment, songwriting, and improvisation."
+    },
+    {
+        "id": 10,
+        "name": "Piano Improvisation",
+        "level": "Intermediate",
+        "ageRange": "12+",
+        "duration": "60 minutes",
+        "price": "GH₵200",
+        "description": "Explore improvisation through scales, chords, patterns, musical ideas, and creative experimentation."
+    },
+    {
+        "id": 11,
+        "name": "Songwriting at the Piano",
+        "level": "Intermediate",
+        "ageRange": "13+",
+        "duration": "60 minutes",
+        "price": "GH₵200",
+        "description": "Use piano skills as a foundation for developing melodies, chord progressions, lyrics, and complete songs."
+    },
+    {
+        "id": 12,
+        "name": "Performance Preparation",
+        "level": "Intermediate",
+        "ageRange": "10+",
+        "duration": "60 minutes",
+        "price": "GH₵225",
+        "description": "Prepare for recitals, concerts, examinations, auditions, and other public performances."
+    },
+    {
+        "id": 13,
+        "name": "Exam Preparation",
+        "level": "Intermediate",
+        "ageRange": "10+",
+        "duration": "60 minutes",
+        "price": "GH₵225",
+        "description": "Structured preparation for practical music examinations with emphasis on repertoire, technique, and musicianship."
+    },
+    {
+        "id": 14,
+        "name": "Pop Piano",
+        "level": "Beginner",
+        "ageRange": "10+",
+        "duration": "45 minutes",
+        "price": "GH₵175",
+        "description": "Learn practical piano skills for playing contemporary songs, chord patterns, melodies, and accompaniment."
+    },
+    {
+        "id": 15,
+        "name": "Gospel Piano",
+        "level": "Intermediate",
+        "ageRange": "12+",
+        "duration": "60 minutes",
+        "price": "GH₵200",
+        "description": "Develop gospel-oriented accompaniment skills including chord voicings, progressions, fills, and musical expression."
+    },
+    {
+        "id": 16,
+        "name": "Accompaniment Skills",
+        "level": "Intermediate",
+        "ageRange": "13+",
+        "duration": "60 minutes",
+        "price": "GH₵200",
+        "description": "Learn how to support singers and ensembles through effective accompaniment, listening, and musical communication."
+    },
+    {
+        "id": 17,
+        "name": "Musicality & Expression",
+        "level": "Advanced",
+        "ageRange": "13+",
+        "duration": "60 minutes",
+        "price": "GH₵225",
+        "description": "Refine phrasing, dynamics, articulation, interpretation, and expressive performance."
+    },
+    {
+        "id": 18,
+        "name": "Audition Coaching",
+        "level": "Advanced",
+        "ageRange": "13+",
+        "duration": "60 minutes",
+        "price": "GH₵250",
+        "description": "Individual preparation for auditions with attention to repertoire, performance confidence, musical interpretation, and presentation."
+    }
+]

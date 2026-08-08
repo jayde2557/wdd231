@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "lonely",
+        "releaseDate": "April 17, 2025",
+        "type": "Single",
+        "genre": "R&B/Soul",
+        "cover": "images/lonely.jpg",
+        "link": "https://music.apple.com/gh/album/lonely-single/1806764727"
+    },
+    {
+        "id": 2,
+        "title": "Past Love",
+        "releaseDate": "September 26, 2025",
+        "type": "Single",
+        "genre": "R&B/Soul",
+        "cover": "images/past-love.jpg",
+        "link": "https://music.apple.com/gh/album/past-love/1844037401?i=1844037402"
+    },
+    {
+        "id": 3,
+        "title": "OBSESSION",
+        "releaseDate": "January 16, 2026",
+        "type": "Single",
+        "genre": "R&B/Soul",
+        "cover": "images/obsession.jpg",
+        "link": "https://music.apple.com/us/album/obsession-single/1865477480"
+    },
+    {
+        "id": 4,
+        "title": "8 Days 8 Reasons",
+        "releaseDate": "2025",
+        "type": "Single",
+        "genre": "Electronic/Alternative",
+        "cover": "images/8-days-8-reasons.jpg",
+        "link": "https://music.apple.com/us/song/8-days-8-reasons/1804181987"
+    },
+    {
+        "id": 5,
+        "title": "Who Needs Perfect",
+        "releaseDate": "2025",
+        "type": "Single",
+        "genre": "R&B/Soul",
+        "cover": "images/who-needs-perfect.jpg",
+        "link": "https://music.apple.com/us/song/who-needs-perfect/1793347948"
+    }
+]

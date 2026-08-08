@@ -1,0 +1,872 @@
+/* =========================================================
+   JAYK MUSIC STUDIO
+   WDD231 Final Project :))
+   Main Stylesheet
+   ========================================================= */
+
+
+/* =========================================================
+   1. CSS VARIABLES
+   ========================================================= */
+
+:root {
+    --ink-navy: #1B2A38;
+    --ivory: #F7F3E8;
+    --brass-gold: #C69B3F;
+    --velvet-burgundy: #6E2A3A;
+    --charcoal: #2B2B2B;
+
+    --white: #FFFFFF;
+    --light-border: rgba(27, 42, 56, 0.18);
+
+    --heading-font: "Fraunces", Georgia, serif;
+    --body-font: "Work Sans", Arial, sans-serif;
+    --utility-font: "Space Mono", monospace;
+
+    --max-width: 1200px;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 7rem;
+
+    --shadow: 0 10px 30px rgba(27, 42, 56, 0.08);
+
+    --transition: 180ms ease;
+}
+
+
+/* =========================================================
+   2. RESET / BASE STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--ivory);
+    color: var(--charcoal);
+    font-family: var(--body-font);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+main {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   3. TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--ink-navy);
+    font-family: var(--heading-font);
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+p {
+    max-width: 65ch;
+}
+
+.eyebrow {
+    color: var(--brass-gold);
+    font-family: var(--utility-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    margin-bottom: var(--space-lg);
+}
+
+.section-heading h2 {
+    margin-top: var(--space-sm);
+}
+
+
+/* =========================================================
+   4. HEADER & NAVIGATION
+   ========================================================= */
+
+.site-header {
+    align-items: center;
+    background-color: var(--ink-navy);
+    color: var(--ivory);
+    display: flex;
+    justify-content: space-between;
+    min-height: 76px;
+    padding: 1rem 5%;
+    position: relative;
+    z-index: 100;
+}
+
+.site-logo {
+    align-items: center;
+    color: var(--ivory);
+    display: flex;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.logo-mark {
+    align-items: center;
+    border: 1px solid var(--brass-gold);
+    color: var(--brass-gold);
+    display: flex;
+    font-family: var(--utility-font);
+    font-size: 0.8rem;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+}
+
+.logo-name {
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
+}
+
+.menu-button {
+    background: transparent;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+}
+
+.menu-button span {
+    background-color: var(--ivory);
+    display: block;
+    height: 2px;
+    transition: var(--transition);
+    width: 26px;
+}
+
+.site-nav {
+    display: none;
+}
+
+.site-nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.site-nav a {
+    color: var(--ivory);
+    font-family: var(--utility-font);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.site-nav a::after {
+    background-color: var(--brass-gold);
+    bottom: -0.4rem;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+    width: 100%;
+}
+
+.site-nav a:hover::after,
+.site-nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   5. GENERAL LAYOUT
+   ========================================================= */
+
+.section {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: var(--space-xl) 5%;
+}
+
+
+/* =========================================================
+   6. BUTTONS
+   ========================================================= */
+
+.button {
+    align-items: center;
+    border: 1px solid transparent;
+    display: inline-flex;
+    font-family: var(--utility-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    min-height: 48px;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    background-color: var(--brass-gold);
+    color: var(--ink-navy);
+}
+
+.button-primary:hover {
+    background-color: var(--ink-navy);
+    color: var(--ivory);
+}
+
+.button-secondary {
+    border-color: var(--brass-gold);
+    color: var(--ink-navy);
+}
+
+.button-secondary:hover {
+    background-color: var(--brass-gold);
+}
+
+
+/* =========================================================
+   7. HERO
+   ========================================================= */
+
+.hero {
+    background-color: var(--ink-navy);
+    color: var(--ivory);
+    display: grid;
+}
+
+.hero-content {
+    padding: 5rem 5% 4rem;
+}
+
+.hero h1 {
+    color: var(--ivory);
+    margin: 1rem 0 1.5rem;
+}
+
+.hero h1 span,
+.page-hero h1 span {
+    color: var(--brass-gold);
+    display: block;
+}
+
+.hero-text {
+    color: rgba(247, 243, 232, 0.82);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-image {
+    min-height: 300px;
+}
+
+.hero-image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* =========================================================
+   8. PAGE HERO
+   ========================================================= */
+
+.page-hero {
+    background-color: var(--ink-navy);
+    color: var(--ivory);
+    padding: 5rem 5%;
+}
+
+.page-hero h1 {
+    color: var(--ivory);
+    margin: 1rem 0 1.5rem;
+}
+
+.page-hero>p:last-child {
+    color: rgba(247, 243, 232, 0.82);
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   9. INTRO SECTION
+   ========================================================= */
+
+.intro {
+    display: grid;
+    gap: 2rem;
+}
+
+.intro-content {
+    font-size: 1.1rem;
+}
+
+.intro-content p+p {
+    margin-top: 1.25rem;
+}
+
+
+/* =========================================================
+   10. SERVICE CARDS
+   ========================================================= */
+
+.service-grid {
+    display: grid;
+    gap: 1px;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-top: 3px solid var(--brass-gold);
+    padding: 2rem;
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.service-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-4px);
+}
+
+.card-number {
+    color: var(--brass-gold);
+    font-family: var(--utility-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    margin-bottom: 1.5rem;
+}
+
+.service-card a {
+    color: var(--velvet-burgundy);
+    font-family: var(--utility-font);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+
+/* =========================================================
+   11. CTA
+   ========================================================= */
+
+.cta {
+    align-items: center;
+    background-color: var(--velvet-burgundy);
+    color: var(--ivory);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+    max-width: calc(var(--max-width) - 10%);
+    padding: 3rem 5%;
+}
+
+.cta h2 {
+    color: var(--ivory);
+    margin: 0.75rem 0 1rem;
+}
+
+.cta p:last-child {
+    color: rgba(247, 243, 232, 0.82);
+}
+
+.cta .button-primary {
+    background-color: var(--ivory);
+}
+
+
+/* =========================================================
+   12. LESSON CONTROLS
+   ========================================================= */
+
+.controls {
+    display: grid;
+    gap: 1rem;
+}
+
+.controls label {
+    color: var(--ink-navy);
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 0.5rem;
+}
+
+.controls select {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    color: var(--charcoal);
+    min-height: 48px;
+    padding: 0.75rem;
+}
+
+
+/* =========================================================
+   13. LESSON GRID
+   ========================================================= */
+
+.lesson-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.lesson-card {
+    background-color: var(--white);
+    border-left: 3px solid var(--brass-gold);
+    padding: 1.5rem;
+}
+
+.lesson-card h3 {
+    margin-bottom: 1rem;
+}
+
+.lesson-card p {
+    margin-bottom: 0.5rem;
+}
+
+.lesson-card .lesson-level {
+    color: var(--velvet-burgundy);
+    font-family: var(--utility-font);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.lesson-card .button {
+    margin-top: 1rem;
+}
+
+.loading-message,
+.error-message {
+    margin-top: 2rem;
+}
+
+.error-message {
+    color: var(--velvet-burgundy);
+}
+
+
+/* =========================================================
+   14. MUSIC GRID
+   ========================================================= */
+
+.music-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.music-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+}
+
+.music-card img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.music-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.music-card p {
+    margin-bottom: 0.5rem;
+}
+
+.music-card .music-meta {
+    color: var(--velvet-burgundy);
+    font-family: var(--utility-font);
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   15. CONTACT FORM
+   ========================================================= */
+
+.contact {
+    background-color: var(--white);
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 700px;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--ink-navy);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: var(--ivory);
+    border: 1px solid var(--light-border);
+    border-radius: 0;
+    color: var(--charcoal);
+    padding: 0.85rem;
+    width: 100%;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--brass-gold);
+    outline: 3px solid rgba(198, 155, 63, 0.25);
+}
+
+/*FORM */
+
+.form-action-details {
+    background-color: var(--white);
+    display: grid;
+    gap: 1.25rem;
+    max-width: 700px;
+    padding: 2rem;
+}
+
+/* =========================================================
+   16. MODAL
+   ========================================================= */
+
+.lesson-modal {
+    background-color: var(--ivory);
+    border: 2px solid var(--brass-gold);
+    color: var(--charcoal);
+    margin: auto;
+    max-width: 600px;
+    padding: 0;
+    width: calc(100% - 2rem);
+}
+
+.lesson-modal::backdrop {
+    background-color: rgba(27, 42, 56, 0.75);
+}
+
+.modal-content {
+    padding: 2rem;
+    position: relative;
+}
+
+.modal-close {
+    background: transparent;
+    border: 0;
+    color: var(--ink-navy);
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0.25rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.modal-content h2 {
+    margin: 0.75rem 0 1.5rem;
+}
+
+.modal-content .button {
+    margin-top: 1.5rem;
+}
+
+
+/* =========================================================
+   17. FOOTER
+   ========================================================= */
+
+.site-footer {
+    background-color: var(--ink-navy);
+    color: var(--ivory);
+    padding: 3rem 5% 1.5rem;
+}
+
+.footer-main {
+    display: grid;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+    max-width: var(--max-width);
+}
+
+.footer-brand {
+    color: var(--brass-gold);
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.site-footer nav ul {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.site-footer a {
+    color: var(--ivory);
+    text-decoration-color: var(--brass-gold);
+    text-underline-offset: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(247, 243, 232, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding-top: 1.5rem;
+}
+
+.footer-bottom p {
+    font-family: var(--utility-font);
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   18. RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .hero {
+        grid-template-columns: 1fr 0.8fr;
+    }
+
+    .hero-content {
+        align-self: center;
+        padding: 5rem;
+    }
+
+    .hero-image {
+        min-height: 600px;
+    }
+
+    .intro {
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lesson-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .music-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .controls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr auto;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+/* =========================================================
+   19. RESPONSIVE — LARGE SCREENS
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .site-header {
+        padding-left: max(5%, calc((100% - var(--max-width)) / 2));
+        padding-right: max(5%, calc((100% - var(--max-width)) / 2));
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .site-nav {
+        display: block;
+    }
+
+    .hero-content {
+        padding: 7rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lesson-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .music-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta {
+        flex-direction: row;
+    }
+
+    .cta .button {
+        flex-shrink: 0;
+    }
+}
+
+
+/* =========================================================
+   20. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--brass-gold);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 899px) {
+
+    .site-nav.open {
+        background-color: var(--ink-navy);
+        display: block;
+        left: 0;
+        padding: 1.5rem 5%;
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+
+    .site-nav.open ul {
+        display: grid;
+        gap: 1.25rem;
+    }
+
+    .site-nav.open a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore Jayk Music Studio's music, services, and creative work."
+    >
+
+    <meta
+        name="author"
+        content="Jayden Baidoo"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Music & Services | Jayk Music Studio"
+    >
+
+    <meta
+        property="og:description"
+        content="Explore music and creative services from Jayk Music Studio."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://your-github-username.github.io/wdd231/final/music.html"
+    >
+
+    <title>Music & Services | Jayk Music Studio</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="images/favicon.ico"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles/site.css"
+    >
+
+    <script
+        type="module"
+        src="scripts/main.js"
+        defer
+    ></script>
+
+    <script
+        type="module"
+        src="scripts/music.js"
+        defer
+    ></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <a
+            class="site-logo"
+            href="index.html"
+            aria-label="Jayk Music Studio home"
+        >
+            <span class="logo-mark">JM</span>
+            <span class="logo-name">Jayk Music Studio</span>
+        </a>
+
+        <button
+            class="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="site-nav"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav
+            class="site-nav"
+            id="site-nav"
+            aria-label="Main navigation"
+        >
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="lessons.html">Lessons</a>
+                </li>
+
+                <li>
+                    <a
+                        href="music.html"
+                        aria-current="page"
+                    >
+                        Music & Services
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+
+            <p class="eyebrow">Music & Services</p>
+
+            <h1>
+                Music made with
+                <span>purpose.</span>
+            </h1>
+
+            <p>
+                Explore selected releases and creative work from
+                Jayk Music Studio.
+            </p>
+
+        </section>
+
+
+        <!-- MUSIC -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">Discography</p>
+
+                <h2>Selected Releases</h2>
+
+                <p>
+                    A collection of music released by Jayn B.
+                </p>
+
+            </div>
+
+            <!-- JavaScript fills this section -->
+            <div
+                class="music-grid"
+                id="music-list"
+            >
+                <p>Loading music...</p>
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">What I Do</p>
+
+                <h2>Creative Services</h2>
+
+            </div>
+
+            <div class="service-grid">
+
+                <article class="service-card">
+
+                    <p class="card-number">01</p>
+
+                    <h3>Music Production</h3>
+
+                    <p>
+                        Bring an idea to life through
+                        production, arrangement, and sound.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <p class="card-number">02</p>
+
+                    <h3>Songwriting</h3>
+
+                    <p>
+                        Develop melodies, lyrics, and
+                        ideas into complete songs.
+                    </p>
+
+                </article>
+
+
+                <article class="service-card">
+
+                    <p class="card-number">03</p>
+
+                    <h3>Recording & Engineering</h3>
+
+                    <p>
+                        Capture and shape recordings with
+                        attention to clarity and character.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CALL TO ACTION -->
+        <section class="cta section">
+
+            <div>
+
+                <p class="eyebrow">Let's Create</p>
+
+                <h2>
+                    Have an idea?
+                </h2>
+
+                <p>
+                    Let's turn it into something real.
+                </p>
+
+            </div>
+
+            <a
+                class="button button-primary"
+                href="contact.html"
+            >
+                Get in Touch
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <div>
+
+                <p class="footer-brand">
+                    Jayk Music Studio
+                </p>
+
+                <p>
+                    Music, creativity, and learning.
+                </p>
+
+            </div>
+
+
+            <nav aria-label="Footer navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="lessons.html">
+                            Lessons
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="music.html">
+                            Music & Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="attributions.html">
+                            Attributions
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.youtube.com/"
+                           target="_blank"
+                           rel="noopener">
+                            Project Video
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Jayk Music Studio
+            </p>
+
+            <p>
+                WDD231 Individual Project
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
