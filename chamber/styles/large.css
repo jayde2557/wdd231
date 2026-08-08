@@ -115,7 +115,8 @@
         text-align: left;
     }
 
-    .footer-left, .footer-right {
+    .footer-left,
+    .footer-right {
         flex: 1;
     }
 
@@ -127,5 +128,19 @@
 @media (min-width: 1100px) {
     .member-container {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "a a b c"
+            "a a d e"
+            "f g h h";
+    }
+
+    .discover-card[style*="grid-area: a"] img {
+        height: 260px;
     }
 }
