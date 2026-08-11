@@ -1,14 +1,6 @@
-/* =========================================================
-   JAYK MUSIC STUDIO
-   WDD231 Final Project :))
-   Main Stylesheet
-   ========================================================= */
+/* JAYK MUSIC STUDIO — small.css (base/mobile styles) */
 
-
-/* =========================================================
-   1. CSS VARIABLES
-   ========================================================= */
-
+/* variables */
 :root {
     --ink-navy: #1B2A38;
     --ivory: #F7F3E8;
@@ -36,11 +28,7 @@
     --transition: 180ms ease;
 }
 
-
-/* =========================================================
-   2. RESET / BASE STYLES
-   ========================================================= */
-
+/* reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -88,11 +76,7 @@ main {
     overflow: hidden;
 }
 
-
-/* =========================================================
-   3. TYPOGRAPHY
-   ========================================================= */
-
+/* textzz */
 h1,
 h2,
 h3,
@@ -138,11 +122,7 @@ p {
     margin-top: var(--space-sm);
 }
 
-
-/* =========================================================
-   4. HEADER & NAVIGATION
-   ========================================================= */
-
+/* header & nav */
 .site-header {
     align-items: center;
     background-color: var(--ink-navy);
@@ -234,22 +214,14 @@ p {
     transform: scaleX(1);
 }
 
-
-/* =========================================================
-   5. GENERAL LAYOUT
-   ========================================================= */
-
+/* layout */
 .section {
     margin: 0 auto;
     max-width: var(--max-width);
     padding: var(--space-xl) 5%;
 }
 
-
-/* =========================================================
-   6. BUTTONS
-   ========================================================= */
-
+/* buttons */
 .button {
     align-items: center;
     border: 1px solid transparent;
@@ -293,11 +265,7 @@ p {
     background-color: var(--brass-gold);
 }
 
-
-/* =========================================================
-   7. HERO
-   ========================================================= */
-
+/* hero */
 .hero {
     background-color: var(--ink-navy);
     color: var(--ivory);
@@ -341,11 +309,7 @@ p {
     width: 100%;
 }
 
-
-/* =========================================================
-   8. PAGE HERO
-   ========================================================= */
-
+/* page hero */
 .page-hero {
     background-color: var(--ink-navy);
     color: var(--ivory);
@@ -363,11 +327,7 @@ p {
     max-width: 650px;
 }
 
-
-/* =========================================================
-   9. INTRO SECTION
-   ========================================================= */
-
+/* intro */
 .intro {
     display: grid;
     gap: 2rem;
@@ -381,11 +341,7 @@ p {
     margin-top: 1.25rem;
 }
 
-
-/* =========================================================
-   10. SERVICE CARDS
-   ========================================================= */
-
+/* service cards */
 .service-grid {
     display: grid;
     gap: 1px;
@@ -430,11 +386,7 @@ p {
     text-underline-offset: 4px;
 }
 
-
-/* =========================================================
-   11. CTA
-   ========================================================= */
-
+/* cta */
 .cta {
     align-items: center;
     background-color: var(--velvet-burgundy);
@@ -461,11 +413,7 @@ p {
     background-color: var(--ivory);
 }
 
-
-/* =========================================================
-   12. LESSON CONTROLS
-   ========================================================= */
-
+/* lesson controls */
 .controls {
     display: grid;
     gap: 1rem;
@@ -487,11 +435,7 @@ p {
     padding: 0.75rem;
 }
 
-
-/* =========================================================
-   13. LESSON GRID
-   ========================================================= */
-
+/* lesson grid */
 .lesson-grid {
     display: grid;
     gap: 1rem;
@@ -533,11 +477,7 @@ p {
     color: var(--velvet-burgundy);
 }
 
-
-/* =========================================================
-   14. MUSIC GRID
-   ========================================================= */
-
+/* music grid */
 .music-grid {
     display: grid;
     gap: 1.5rem;
@@ -569,11 +509,7 @@ p {
     font-size: 0.7rem;
 }
 
-
-/* =========================================================
-   15. CONTACT FORM
-   ========================================================= */
-
+/* contact form */
 .contact {
     background-color: var(--white);
 }
@@ -617,8 +553,6 @@ p {
     outline: 3px solid rgba(198, 155, 63, 0.25);
 }
 
-/*FORM */
-
 .form-action-details {
     background-color: var(--white);
     display: grid;
@@ -627,10 +561,7 @@ p {
     padding: 2rem;
 }
 
-/* =========================================================
-   16. MODAL
-   ========================================================= */
-
+/* modal */
 .lesson-modal {
     background-color: var(--ivory);
     border: 2px solid var(--brass-gold);
@@ -670,11 +601,7 @@ p {
     margin-top: 1.5rem;
 }
 
-
-/* =========================================================
-   17. FOOTER
-   ========================================================= */
-
+/* footer */
 .site-footer {
     background-color: var(--ink-navy);
     color: var(--ivory);
@@ -721,106 +648,7 @@ p {
     font-size: 0.7rem;
 }
 
-
-/* =========================================================
-   18. RESPONSIVE — TABLET
-   ========================================================= */
-
-@media (min-width: 600px) {
-
-    .hero {
-        grid-template-columns: 1fr 0.8fr;
-    }
-
-    .hero-content {
-        align-self: center;
-        padding: 5rem;
-    }
-
-    .hero-image {
-        min-height: 600px;
-    }
-
-    .intro {
-        grid-template-columns: 0.8fr 1fr;
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .lesson-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .music-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .controls {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr auto;
-    }
-
-    .footer-bottom {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-
-/* =========================================================
-   19. RESPONSIVE — LARGE SCREENS
-   ========================================================= */
-
-@media (min-width: 900px) {
-
-    .site-header {
-        padding-left: max(5%, calc((100% - var(--max-width)) / 2));
-        padding-right: max(5%, calc((100% - var(--max-width)) / 2));
-    }
-
-    .menu-button {
-        display: none;
-    }
-
-    .site-nav {
-        display: block;
-    }
-
-    .hero-content {
-        padding: 7rem;
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .lesson-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .music-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .cta {
-        flex-direction: row;
-    }
-
-    .cta .button {
-        flex-shrink: 0;
-    }
-}
-
-
-/* =========================================================
-   20. ACCESSIBILITY
-   ========================================================= */
-
+/* accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -844,10 +672,7 @@ textarea:focus-visible {
     }
 }
 
-/* =========================================================
-   MOBILE NAVIGATION
-   ========================================================= */
-
+/* mobile nav toggle (below 900px) */
 @media (max-width: 899px) {
 
     .site-nav.open {

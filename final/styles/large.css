@@ -1,0 +1,88 @@
+/* JAYK MUSIC STUDIO — large.css (tablet + desktop overrides) */
+
+/* tablet, 600px+ */
+@media (min-width: 600px) {
+
+    .hero {
+        grid-template-columns: 1fr 0.8fr;
+    }
+
+    .hero-content {
+        align-self: center;
+        padding: 5rem;
+    }
+
+    .hero-image {
+        min-height: 600px;
+    }
+
+    .intro {
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lesson-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .music-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .controls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr auto;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* desktop, 900px+ */
+@media (min-width: 900px) {
+
+    .site-header {
+        padding-left: max(5%, calc((100% - var(--max-width)) / 2));
+        padding-right: max(5%, calc((100% - var(--max-width)) / 2));
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .site-nav {
+        display: block;
+    }
+
+    .hero-content {
+        padding: 7rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lesson-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .music-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta {
+        flex-direction: row;
+    }
+
+    .cta .button {
+        flex-shrink: 0;
+    }
+}
