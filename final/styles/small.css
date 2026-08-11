@@ -8,7 +8,6 @@
     --velvet-burgundy: #6E2A3A;
     --charcoal: #2B2B2B;
 
-    /* text-safe gold variants (--brass-gold fails AA as text) */
     --gold-text-on-light: #866828;
     --gold-text-on-dark: #D0AD62;
 
@@ -270,7 +269,6 @@ p {
     background-color: var(--brass-gold);
 }
 
-/* on dark backgrounds (hero), navy text is invisible — flip to ivory */
 .hero .button-secondary {
     color: var(--ivory);
 }
