@@ -1,12 +1,16 @@
 /* JAYK MUSIC STUDIO — small.css (base/mobile styles) */
 
-/* variables */
+/* jaykk variables */
 :root {
     --ink-navy: #1B2A38;
     --ivory: #F7F3E8;
     --brass-gold: #C69B3F;
     --velvet-burgundy: #6E2A3A;
     --charcoal: #2B2B2B;
+
+    /* text-safe gold variants (--brass-gold fails AA as text) */
+    --gold-text-on-light: #866828;
+    --gold-text-on-dark: #D0AD62;
 
     --white: #FFFFFF;
     --light-border: rgba(27, 42, 56, 0.18);
@@ -76,7 +80,7 @@ main {
     overflow: hidden;
 }
 
-/* textzz */
+/* typography */
 h1,
 h2,
 h3,
@@ -105,7 +109,7 @@ p {
 }
 
 .eyebrow {
-    color: var(--brass-gold);
+    color: var(--gold-text-on-light);
     font-family: var(--utility-font);
     font-size: 0.75rem;
     font-weight: 700;
@@ -257,12 +261,22 @@ p {
 }
 
 .button-secondary {
+    background-color: transparent;
     border-color: var(--brass-gold);
     color: var(--ink-navy);
 }
 
 .button-secondary:hover {
     background-color: var(--brass-gold);
+}
+
+/* on dark backgrounds (hero), navy text is invisible — flip to ivory */
+.hero .button-secondary {
+    color: var(--ivory);
+}
+
+.hero .button-secondary:hover {
+    color: var(--ink-navy);
 }
 
 /* hero */
@@ -362,7 +376,7 @@ p {
 }
 
 .card-number {
-    color: var(--brass-gold);
+    color: var(--gold-text-on-light);
     font-family: var(--utility-font);
     font-size: 0.75rem;
     font-weight: 700;
@@ -411,6 +425,10 @@ p {
 
 .cta .button-primary {
     background-color: var(--ivory);
+}
+
+.cta .eyebrow {
+    color: var(--gold-text-on-dark);
 }
 
 /* lesson controls */

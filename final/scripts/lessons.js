@@ -50,9 +50,7 @@ async function getLessons() {
 }
 
 
-// =========================================================
-// DISPLAY LESSONS
-// =========================================================
+
 
 function displayLessons(items) {
 
