@@ -143,9 +143,8 @@ function populateFilters(items) {
 }
 
 
-// =========================================================
 // FILTER LESSONS
-// =========================================================
+
 
 function filterLessons() {
 
@@ -180,10 +179,8 @@ function filterLessons() {
 }
 
 
-// =========================================================
-// MODAL
-// =========================================================
 
+// MODAL
 function addModalListeners() {
 
     const detailButtons =

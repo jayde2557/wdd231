@@ -8,6 +8,7 @@
     --velvet-burgundy: #6E2A3A;
     --charcoal: #2B2B2B;
 
+    /* text-safe gold variants (--brass-gold fails AA as text) */
     --gold-text-on-light: #866828;
     --gold-text-on-dark: #D0AD62;
 
@@ -269,6 +270,7 @@ p {
     background-color: var(--brass-gold);
 }
 
+
 .hero .button-secondary {
     color: var(--ivory);
 }
@@ -425,7 +427,9 @@ p {
     background-color: var(--ivory);
 }
 
-.cta .eyebrow {
+.cta .eyebrow,
+.hero .eyebrow,
+.page-hero .eyebrow {
     color: var(--gold-text-on-dark);
 }
 
