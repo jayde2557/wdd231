@@ -39,7 +39,7 @@
         "id": 5,
         "name": "Advanced Piano",
         "level": "Advanced",
-        "ageRange": "13+",
+        "ageRange": "13+"   ,
         "duration": "60 minutes",
         "price": "GH₵250",
         "description": "Focused instruction for advanced students working toward challenging repertoire and stronger performance skills."
